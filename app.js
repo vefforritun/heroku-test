@@ -115,8 +115,8 @@ app.get('/logout', (req, res) => {
 });
 
 const hostname = '127.0.0.1';
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
   console.info(`Server running at http://${hostname}:${port}/`);
 });
